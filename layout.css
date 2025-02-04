@@ -1,0 +1,46 @@
+* {
+  box-sizing:bordder-box;
+}
+
+#container{
+    display:grid;
+    grid-template-areas:  /* areas within an area that are names, we can put things in these areas. */
+          "header header"
+          "nav main"
+          "footer footer"
+    ;
+    grid-template-columns:1fr 3fr;
+    grid-template-rows:auto 1fr auto;
+}
+/* laying out the page the way you want, placing the template areas in grid areas. */
+header{
+    grid-area:header; 
+    background-color:rgb(167, 206, 241);
+    color:rgb(74, 18, 18);
+
+}
+ main{
+    grid-area:main;
+ }
+
+ nav{
+    grid-area:nav;
+    background-color:aliceblue;
+ }
+
+ footer{
+    grid-area:footer;
+    grid-area:footer; 
+    background-color:rgb(167, 206, 241);
+ }
+
+ @media screen and (max-width:600px){
+    #container{
+        grid-template-areas: 
+        "header"
+        "main"
+        "nav"
+        "footer"
+        ;
+    } /* or you could do display:block; */ 
+ }
