@@ -1,0 +1,26 @@
+* {
+    box-sizing:border-box;
+
+}
+
+body{
+    background-color:rgb(167, 206, 241);
+    color:rgb(74, 18, 18);
+}
+/* generally media queries go at the bottom of the css page but there are execptions to the rule*/
+@media screen and (max-width:500px) {
+    /* any screen resolution from 0-500px wide */ 
+    body{
+        background-color:antiquewhite;
+    }
+
+}
+
+@media screen and (max-width:400px){
+    /* any screen resolution from 0-400px wide. Because this is below the previous it overrides it. */
+    body{
+        background-color: gray;
+        color:white;
+    
+    }
+}
